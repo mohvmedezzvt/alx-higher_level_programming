@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# compiles the Python script
+python3 -m py_compile "$PYFILE"
+
+# copies the compiled .pyc file from the __pycache__ directory
+cp __pycache__/*.pyc "${PYFILE}c"
+
+# removes the __pycache__ directory
+rm -rf __pycache__
