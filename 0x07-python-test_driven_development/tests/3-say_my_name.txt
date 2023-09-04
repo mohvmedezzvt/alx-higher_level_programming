@@ -1,0 +1,20 @@
+# Test cases for the say_my_name function
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# Test case 1: Print my first and last names as a strings
+>>> say_my_name("Mohamed", "Ezzat")
+My name is Mohamed Ezzat
+
+# Test case 2: Print my first name with the default last name
+>>> say_my_name("Mohamed")
+My name is Mohamed 
+
+# Test case 3: Trying to print my firstname as a non string value
+>>> say_my_name(10, "Ezzat")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+# Test case 4: Trying to print my first name in a bad formatted way
+>>> say_my_name(" MOHmed", "ezZat   ")
+My name is Mohmed Ezzat
