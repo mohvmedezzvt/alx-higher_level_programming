@@ -29,14 +29,14 @@ Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
-# Test case 7: Trying to add string and the default value (Should raise an exception)
->>> print(add_integer("School"))
+# Test case 7: Trying to add boolean and the default value (Should raise an exception)
+>>> print(add_integer(True))
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
-# Test case 8: Adding a list and a float
->>> print(add_integer([1, 2, 3], 1.5))
+# Test case 7: Trying to add integer and boolean (Should raise an exception)
+>>> print(add_integer(2, True))
 Traceback (most recent call last):
     ...
-TypeError: a must be an integer
+TypeError: b must be an integer
