@@ -35,6 +35,8 @@ Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
-# Test case 8: Adding a float and a float
->>> print(add_integer(100.3, 2.2))
-102
+# Test case 8: Adding a list and a float
+>>> print(add_integer([1, 2, 3], 1.5))
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
