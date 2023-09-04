@@ -1,0 +1,40 @@
+# Test cases for the add_integer function
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# Test case 1: Adding two integers
+>>> print(add_integer(1, 2))
+3
+
+# Test case 2: Adding an integer and a negative integer
+>>> print(add_integer(100, -2))
+98
+
+# Test case 3: Adding an integer and the default value
+>>> print(add_integer(2))
+100
+
+# Test case 4: Adding a float and a negative integer
+>>> print(add_integer(100.3, -2))
+98
+
+# Test case 5: Trying to add an integer and a string (Should raise an exception)
+>>> print(add_integer(4, "School"))
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+# Test case 6: Trying to add None (Should raise an exception)
+>>> print(add_integer(None))
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+# Test case 7: Trying to add string and the default value (Should raise an exception)
+>>> print(add_integer("School"))
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+# Test case 8: Adding a float and a float
+>>> print(add_integer(100.3, 2.2))
+102
