@@ -27,7 +27,15 @@ ZeroDivisionError: division by zero
 >>> print(matrix_divided(matrix, 3))
 [[0.4, 0.77, 1.13], [1.5, 1.87, 2.23]]
 
-# Test case 4: Trying to divide matrix that have non equal rows
+# Test case 4: Dividing matrix of all integers by float("inf")
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+>>> print(matrix_divided(matrix, float("inf")))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+# Test case 5: Trying to divide matrix that have non equal rows
 >>> matrix = [
 ...     [1, 2, 3],
 ...     [4, 5, 6, 7]
@@ -37,7 +45,7 @@ Traceback (most recent call last):
     ...
 TypeError: Each row of the matrix must have the same size
 
-# Test case 5: Trying to divide matrix that have a string in it
+# Test case 6: Trying to divide matrix that have a string in it
 >>> matrix = [
 ...     [1, 2, 3],
 ...     [4, 5, "School"]
@@ -46,3 +54,33 @@ TypeError: Each row of the matrix must have the same size
 Traceback (most recent call last):
     ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test case 7: Trying to divide matrix by a string
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+>>> print(matrix_divided(matrix, "div"))
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+# Test case 8: Trying to missing one argument
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+>>> print(matrix_divided(matrix, "div"))
+Traceback (most recent call last):
+    ...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+# Test case 9: Trying to missing two arguments
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+>>> print(matrix_divided())
+Traceback (most recent call last):
+    ...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
