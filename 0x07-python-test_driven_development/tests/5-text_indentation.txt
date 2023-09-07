@@ -42,6 +42,16 @@
     <BLANKLINE>
      OK!
 
+    >>> text = "Holberton. School? How are you: Mohamed"
+    >>> text_indentation(text)
+    Holberton.
+    <BLANKLINE>
+     School?
+    <BLANKLINE>
+     How are you:
+    <BLANKLINE>
+     Mohamed
+
 # Test case 6: Test with an empty string (should not raise an exception)
     >>> text = ""
     >>> text_indentation(text)
