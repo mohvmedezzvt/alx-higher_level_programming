@@ -1,0 +1,54 @@
+# Test cases for the print_square function
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Test case 1: Test with a simple text containing '.', '?', and ':'
+    >>> text = "Hello? How are you."
+    >>> text_indentation(text)
+    Hello?
+    <BLANKLINE>
+     How are you.
+    <BLANKLINE>
+
+# Test case 2: Test with multiple lines and various special characters
+    >>> text = "This is a test...of text_indentation.\nHow about that?"
+    >>> text_indentation(text)
+    This is a test.
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    of text_indentation.
+    <BLANKLINE>
+    How about that?
+    <BLANKLINE>
+
+# Test case 3: Test with empty lines and spaces (should not affect output)
+    >>> text = "   \n  \n  "
+    >>> text_indentation(text)
+
+# Test case 4: Test with a single character line
+    >>> text = "X"
+    >>> text_indentation(text)
+    X
+
+# Test case 5: Test with different special characters
+    >>> text = "What's up? This is a test: OK!"
+    >>> text_indentation(text)
+    What's up?
+    <BLANKLINE>
+     This is a test:
+    <BLANKLINE>
+     OK!
+
+# Test case 6: Test with an empty string (should not raise an exception)
+    >>> text = ""
+    >>> text_indentation(text)
+
+# Test case 7: Test with a non-string input (should raise TypeError)
+    >>> text = 42
+    >>> text_indentation(text)
+    Traceback (most recent call last):
+      ...
+    TypeError: text must be a string
