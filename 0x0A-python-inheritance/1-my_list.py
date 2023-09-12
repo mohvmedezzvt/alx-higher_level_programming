@@ -12,5 +12,8 @@ class MyList(list):
     def print_sorted(self):
         """Print the list in ascending sorted order.
         """
-        sorted_list = sorted(self)
-        print(sorted_list)
+        if self is None:
+            print([])
+        else:
+            sorted_list = sorted(self)
+            print(sorted_list)
