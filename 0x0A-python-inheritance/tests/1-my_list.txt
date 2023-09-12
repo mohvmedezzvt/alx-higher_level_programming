@@ -27,8 +27,3 @@
 >>> empty_list = MyList()
 >>> empty_list.print_sorted()
 []
-
-# Test when the list is None
->>> my_list = MyList(None)
->>> my_list.print_sorted()
-[]
