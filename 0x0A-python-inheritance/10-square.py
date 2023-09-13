@@ -10,12 +10,15 @@ class Square(Rectangle):
     Args:
         Rectangle (_type_): _description_
     """
+
     def __init__(self, size):
         """Initialize a Square instance with size.
 
         Args:
             size (int): The size of the square.
         """
+        self.__size = size
+        self.integer_validator("size", size)
         super().__init__(size, size)
 
     def __str__(self):
