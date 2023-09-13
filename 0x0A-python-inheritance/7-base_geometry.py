@@ -22,7 +22,7 @@ class BaseGeometry():
             name (string): A string representing the name of the value.
             value (int): The value to be validated.
         """
-        if not isinstance(value, int) or isinstance(value, bool):
+        if type(value) != int:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
