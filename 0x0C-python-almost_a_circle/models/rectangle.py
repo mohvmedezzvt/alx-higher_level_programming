@@ -49,3 +49,23 @@ class Rectangle(Base):
     def height(self, value):
         """Sets the height of the rectangle."""
         self.__height = value
+
+    @property
+    def x(self):
+        """Gets the x of the rectangle."""
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """Sets the x of the rectangle."""
+        self.__x = value
+
+    @property
+    def y(self):
+        """Gets the y of the rectangle."""
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """Sets the y of the rectangle."""
+        self.__y = value
