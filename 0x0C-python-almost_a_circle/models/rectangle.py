@@ -107,6 +107,24 @@ class Rectangle(Base):
             print(" " * self.__x, end="")
             print("#" * self.__width)
 
+    def update(self, *args):
+        """Updates attributes based on the given arguments.
+
+        Args:
+            *args: Arguments in the order: id, width, height, x, y.
+        """
+        if args:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.width = args[1]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]
+
     def __str__(self):
         """Returns a string representation of the rectangle."""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - " \
