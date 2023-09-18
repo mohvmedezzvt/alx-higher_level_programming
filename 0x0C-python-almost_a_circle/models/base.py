@@ -32,7 +32,7 @@ class Base():
             str: The JSON string representation.
         """
         if not list_dictionaries:
-            return "[]"
+            return []
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -50,3 +50,10 @@ class Base():
 
         with open(file_name, "w", encoding="utf-8") as file:
             file.write(cls.to_json_string(json_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Return the list represented by a JSON string."""
+        if not json_string:
+            return []
+        return json.loads(json_string)
