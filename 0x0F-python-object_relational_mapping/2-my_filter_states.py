@@ -10,7 +10,7 @@ if __name__ == "__main__":
             sys.argv[0]))
         sys.exit(1)
 
-    username, password, database, state_name_searched = sys.argv[1:5]
+    username, password, database = sys.argv[1:4]
     connection = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     cursor = connection.cursor()
     query = """SELECT * FROM states
-    WHERE BINARY name = '{}' ORDER BY id ASC""".format(state_name_searched)
+    WHERE BINARY name = '{}' ORDER BY id ASC""".format(argv[4])
     cursor.execute(query)
 
     rows = cursor.fetchall()
