@@ -20,7 +20,7 @@ if __name__ == "__main__":
     )
 
     cursor = connection.cursor()
-    query = "SELECT * FROM states WHERE name = '%s' ORDER BY id ASC"
+    query = "SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC"
     cursor.execute(query, (state_name_searched,))
 
     rows = cursor.fetchall()
