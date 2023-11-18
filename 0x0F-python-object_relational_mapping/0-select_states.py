@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""MySQLdb Module"""
+
 import MySQLdb
 import sys
 
