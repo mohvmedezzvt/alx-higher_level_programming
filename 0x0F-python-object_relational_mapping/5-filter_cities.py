@@ -22,15 +22,9 @@ if __name__ == '__main__':
     cursor.execute(query, (state,))
 
     rows = cursor.fetchall()
-    flag = -1
-    for row in rows:
-        if flag == -1:
-            print(row, end="")
-            flag = 1
-        else:
-            print(", " + row, end="")
+    city_names = ', '.join(row[0] for row in rows)
 
-    print("")
+    print(city_names)
 
     cursor.close()
     connection.close()
