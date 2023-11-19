@@ -5,7 +5,7 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    username, password, database, stateNameSearched = sys.argv[1:4]
+    username, password, database = sys.argv[1:4]
     connection = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     cursor = connection.cursor()
     query = "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY id ASC"
-    cursor.execute(query, (state_name_searched,))
+    cursor.execute(query, (argv[4],))
 
     rows = cursor.fetchall()
     for row in rows:
