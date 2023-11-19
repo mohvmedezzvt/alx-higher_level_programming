@@ -28,7 +28,9 @@ if __name__ == '__main__':
             print(row, end="")
             flag = 1
         else:
-            print(", " + row)
+            print(", " + row, end="")
+    
+    print("")
 
     cursor.close()
     connection.close()
