@@ -5,7 +5,7 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    username, password, database, stateNameSearched = sys.argv[1:5]
+    username, password, database, stateNameSearched = sys.argv[1:4]
     connection = MySQLdb.connect(
         host="localhost",
         port=3306,
