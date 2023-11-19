@@ -29,7 +29,7 @@ if __name__ == '__main__':
             flag = 1
         else:
             print(", " + row, end="")
-    
+
     print("")
 
     cursor.close()
