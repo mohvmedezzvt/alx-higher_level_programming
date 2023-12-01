@@ -11,4 +11,4 @@ if __name__ == "__main__":
     print(r.text)
 
     if r.status_code // 100 == 4:
-        print(f"Error code: {response.status_code}")
+        print(f"Error code: {r.status_code}")
