@@ -3,22 +3,23 @@
 Sends a POST request to http://0.0.0.0:5000/search_user
 with the letter as a parameter.
 """
-if __name__ == "__main__":
-    import requests
-    import sys
+import requests
+import sys
 
+if __name__ == "__main__":
     if len(sys.argv) == 1:
         q = ""
     else:
         q = sys.argv[1]
 
-    data{'q': q}
+    data = {'q': q}
 
     r = requests.post('http://0.0.0.0:5000/search_user', data=data)
     try:
         json_data = r.json()
         if json_data:
-            print(f"[{json_data['id']}] {json_data['name']}")
+            print("[{}] {}".format(json_data.get('id'),
+                                   json_data.get('name')))
         else:
             print("No result")
     except ValueError:
