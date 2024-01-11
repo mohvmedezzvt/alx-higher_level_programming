@@ -1,3 +1,5 @@
-document.getElementById('red_header').addEventListener('click', function () {
-  $('header').addClass('red');
+$(function () {
+  $('DIV#red_header').on('click', function () {
+    $('header').addClass('red');
+  });
 });
